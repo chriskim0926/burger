@@ -8,3 +8,10 @@ orm.selectWhere("pets", "animal_name", "Rachel");
 
 // Find the buyer with the most pets.
 orm.findWhoHasMost("buyer_name", "buyer_id", "buyers", "pets");
+
+module.exports = burgers;
+
+
+
+
+
