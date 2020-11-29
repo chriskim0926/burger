@@ -15,13 +15,14 @@ var orm = {
     },
     create: function(table, cols, vals, cb) {
       var queryString = "INSERT INTO " + table;
+    //   INSERT INTO burgers (burger_name) VALUES ('Vegi Burger');
   
-      queryString += " (";
-      queryString += cols.toString();
-      queryString += ") ";
-      queryString += "VALUES (";
-      queryString += printQuestionMarks(vals.length);
-      queryString += ") ";
+      queryString += " (burger_name) VALUES (";
+      queryString += "'";
+      queryString += vals;
+      queryString += "'";
+      queryString += ");";
+
   
       console.log(queryString);
   
