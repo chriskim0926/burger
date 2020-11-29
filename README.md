@@ -31,7 +31,7 @@ Eat-Da-Burger! is a restaurant app that lets users input the names of burgers th
 3) Once burger was eaten, press "Devoured" button next to "Burger to Eat"
 4) The burger will then be added to the left list of all burger that have been devoured. 
 
-![](eatdaburger.gif)
+![](public/assets/eatdaburger.gif)
 
 
 
