@@ -25,5 +25,31 @@ router.get("/", function(req, res) {
     });
   });
 
+//   router.put("/update", function(req, res){
+//       burger.update(["id",req.body.id], function(){
+//           res.redirect("/");
+//       })
+//   })
+
+// router.put("/:id", function(req, res) {
+//     var condition = "id = " + req.params.id;
+  
+//     console.log("condition", condition);
+  
+//     res.redirect("/")
+//   });
+  
+  router.put("/:id", function(req, res) {
+    var condition = "id = " + req.params.id;
+  
+    console.log("condition", condition);
+  
+    burger.update({
+      devoured: req.body.devoured
+    }, condition, function() {
+      res.redirect("/");
+    });
+  });
+
   module.exports = router;
 
