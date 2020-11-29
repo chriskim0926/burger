@@ -1,17 +1,25 @@
-var orm = require("./config/orm.js");
 
-// Find all the pets ordering by the lowest price to the highest price.
-orm.selectAndOrder("animal_name", "pets", "price");
+// Import the ORM to create functions that will interact with the database.
+var orm = require("../config/orm.js");
 
-// Find a pet in the pets table by an animal_name of Rachel.
-orm.selectWhere("pets", "animal_name", "Rachel");
+var burger = {
+    all: function(cb) {
+      orm.all("burgers", function(res) {
+        cb(res);
+      });
+    },
+    // The variables cols and vals are arrays.
+    create: function(cols, vals, cb) {
+      orm.create("burgers", cols, vals, function(res) {
+        cb(res);
+      });
+    },
+    update: function(objColVals, condition, cb) {
+      orm.update("burgers", objColVals, condition, function(res) {
+        cb(res);
+      });
+    }
+  };
+  
 
-// Find the buyer with the most pets.
-orm.findWhoHasMost("buyer_name", "buyer_id", "buyers", "pets");
-
-module.exports = burgers;
-
-
-
-
-
+  module.exports = burger;

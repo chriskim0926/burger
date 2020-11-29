@@ -1,0 +1,42 @@
+img {
+    max-width: 300px;
+    max-height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+body {
+    background: #DAA520;
+}
+
+#submit{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#0066FF ;
+    color: white;
+    margin-top: 30px;
+
+}
+#burgerEntry{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 300px;
+    height: 100px;
+}
+
+ul{
+    float: left;
+    margin-top: 50px;
+}
+.btn{
+    background-color: thistle;
+}
+#instruction{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
